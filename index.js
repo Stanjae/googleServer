@@ -8,6 +8,10 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
+app.get('/', async (req, res) => {
+    res.send('Hi, welcome to stanjae Api');
+})
+
 app.get('/api/search', async (req, res) => {
     /* const allowed_domain = '*'  // Adjust with your domain or localhost port
     res.setHeader('Access-Control-Allow-Origin', allowed_domain);
